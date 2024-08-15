@@ -5,7 +5,6 @@ const initialState = {
   ordered: [],
   TotalPrice: 0,
   TotalProduct: 0,
-  value: 0,
 };
 
 export const productSlice = createSlice({
@@ -20,18 +19,21 @@ export const productSlice = createSlice({
       if (item) {
         item.amount += 1;
       }
+      productSlice.caseReducers.calculateTotal(state);
     },
     decreamentAmount: (state, { payload }) => {
       const item = state.products.find((prod) => prod.id == payload);
       if (item && item.amount > 0) {
         item.amount -= 1;
       }
+      productSlice.caseReducers.calculateTotal(state);
     },
     AddToAmount: (state, { payload }) => {
       const item = state.products.find((prod) => prod.id == payload);
       if (item && !item.amount) {
         item.amount = 1;
       }
+      productSlice.caseReducers.calculateTotal(state);
     },
     calculateTotal: (state) => {
       let allOrdersAmount = 0;
