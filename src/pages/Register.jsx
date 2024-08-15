@@ -36,8 +36,7 @@ function Register() {
               </h2>
 
               <p className="mt-4 leading-relaxed text-white/90">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Eligendi nam dolorum aliquam, quibusdam aperiam voluptatum.
+              Inputlarni ichiga hech narsa yozmasdan  Create an account tugmasini bosing!
               </p>
             </div>
           </section>

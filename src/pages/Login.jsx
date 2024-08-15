@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { haveUser } from "../features/user/userSlice";
 import { useDispatch } from "react-redux";
 
-
 function Login() {
   const dispatch = useDispatch();
   return (
@@ -15,8 +14,7 @@ function Login() {
           </h1>
 
           <p className="mx-auto mt-4 max-w-md text-center text-gray-500">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati
-            sunt dolores deleniti inventore quaerat mollitia?
+            Inputlarni ichiga hech narsa yozmasdan Login tugmasini bosing!
           </p>
 
           <form
