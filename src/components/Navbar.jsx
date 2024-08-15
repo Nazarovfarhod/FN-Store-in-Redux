@@ -15,7 +15,6 @@ import userImg from "../assets/user-img.png";
 function Navbar() {
   const { TotalProduct, TotalPrice } = useSelector((state) => state.product);
   const dispatch = useDispatch();
-  console.log(TotalProduct);
 
   return (
     <div>

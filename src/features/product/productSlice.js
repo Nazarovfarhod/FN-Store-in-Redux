@@ -41,7 +41,9 @@ export const productSlice = createSlice({
       state.products.forEach((prod) => {
         if (prod.amount) {
           allOrdersAmount += prod.amount;
-          allOrderPrice += prod.amount * prod.price;
+          allOrderPrice +=
+            prod.amount *
+            (prod.price - (prod.price * prod.discount) / 100).toFixed(2);
         }
       });
 
