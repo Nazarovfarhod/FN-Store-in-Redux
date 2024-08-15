@@ -36,7 +36,8 @@ function Register() {
               </h2>
 
               <p className="mt-4 leading-relaxed text-white/90">
-              Inputlarni ichiga hech narsa yozmasdan  Create an account tugmasini bosing!
+                Inputlarni ichiga hech narsa yozmasdan Create an account
+                tugmasini bosing!
               </p>
             </div>
           </section>

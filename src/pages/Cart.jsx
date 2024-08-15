@@ -16,7 +16,9 @@ function Cart() {
   return (
     <div>
       {!filteredProducts || filteredProducts.length === 0 ? (
-        <h1 className="w-full text-center text-5xl font-bold mt-40">No Products🤷‍♂️</h1>
+        <h1 className="w-full text-center text-5xl font-bold mt-40">
+          No Products🤷‍♂️
+        </h1>
       ) : (
         <div className="w-[800px] mx-auto text-center">
           <div className="overflow-x-auto">
