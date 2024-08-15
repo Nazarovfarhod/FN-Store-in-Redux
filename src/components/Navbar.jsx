@@ -9,6 +9,8 @@ import { useSelector, useDispatch } from "react-redux";
 
 import { haveUser } from "../features/user/userSlice";
 import { SlLogout } from "react-icons/sl";
+//assets
+import userImg from "../assets/user-img.png";
 
 function Navbar() {
   const { TotalProduct, TotalPrice } = useSelector((state) => state.product);
@@ -122,7 +124,7 @@ function Navbar() {
           >
             <img
               alt=""
-              src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+              src={userImg}
               className="size-10 rounded-full object-cover"
             />
 
