@@ -35,13 +35,31 @@ function SingleProduct() {
 
                   <div>
                     <h2 className="font-medium sm:text-lg">{prod.name}</h2>
-                    <p className="mb-5">( {prod.brand} )</p>
+                    <p>( {prod.brand} )</p>
 
-                    <p className="line-clamp-2 text-sm text-gray-700">
+                    <p className="line-clamp-2 text-sm mb-5 text-gray-700">
                       Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                       Accusamus, accusantium temporibus iure delectus ut totam
                       natus nesciunt ex? Ducimus, enim.
                     </p>
+                    <div className="flex justify-between items-center px-5">
+                      <p className="line-through opacity-50">
+                        <span>Old Price:</span> <span>{prod.price}</span>
+                      </p>
+                      <p className="px-4 py-1 bg-red-400 rounded-3xl text-white font-semibold">
+                        Sale: {prod.discount}%
+                      </p>
+                      <p>
+                        <span>New Price:</span>{" "}
+                        <span>
+                          $
+                          {(
+                            prod.price -
+                            (prod.price * prod.discount) / 100
+                          ).toFixed(2)}
+                        </span>
+                      </p>
+                    </div>
                   </div>
                 </div>
 
@@ -54,7 +72,7 @@ function SingleProduct() {
                 </div>
               </article>
 
-              <div className="w-full ml-48 mx-auto flex gap-4 ">
+              <div className="w-full ml-48 mx-auto flex  gap-4 ">
                 <div className="flex items-center justify-center rounded mb-2 border border-gray-200">
                   {prod.amount ? (
                     <button
@@ -90,6 +108,12 @@ function SingleProduct() {
                     <BsPlusSquareFill />
                   </button>
                 </div>
+                <p className="font-semibold mt-2">Total Price: 
+                  ${prod.amount *
+                    (prod.price - (prod.price * prod.discount) / 100).toFixed(
+                      2
+                    )}
+                </p>
               </div>
             </div>
           );

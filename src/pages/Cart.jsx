@@ -62,8 +62,21 @@ function Cart() {
                         -
                       </button>
                     </td>
-                    <td>${product.price}</td>
-                    <td>${(product.amount * product.price).toFixed(2)}</td>
+                    <td>
+                      {" "}
+                      $
+                      {(
+                        product.price -
+                        (product.price * product.discount) / 100
+                      ).toFixed(2)}
+                    </td>
+                    <td>
+                      $
+                      {(
+                        product.amount * product.price -
+                        (product.price * product.discount) / 100
+                      ).toFixed(2)}
+                    </td>
                   </tr>
                 ))}
               </tbody>
