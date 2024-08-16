@@ -9,7 +9,7 @@ function Home() {
   // console.log(products);
 
   return (
-    <div className="w-full mx-auto ml-36 flex flex-col items-center">
+    <div className="w-full mx-auto ml-32 flex flex-col items-center">
       <h1 className="text-center text-5xl font-bold mb-20">
         Clothing Products
       </h1>
