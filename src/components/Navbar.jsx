@@ -18,7 +18,7 @@ function Navbar() {
 
   return (
     <div>
-      <div className="flex h-screen flex-col justify-between w-64 fixed top-0  border-e bg-slate-100">
+      <div className="flex h-screen flex-col justify-between w-64 fixed top-0 z-30  border-e bg-slate-100">
         <div className="px-3 py-6">
           <span className="flex items-center p-1 mb-10 rounded-lg">
             <div>
