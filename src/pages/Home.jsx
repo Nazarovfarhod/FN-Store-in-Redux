@@ -13,7 +13,7 @@ function Home() {
       <h1 className="text-center text-5xl font-bold mb-20">
         Clothing Products
       </h1>
-      <div className="grid grid-cols-3 gap-10">
+      <div className="grid grid-cols-3 gap-5">
         {products?.map((product) => {
           return <Card product={product} key={product.id} />;
         })}
