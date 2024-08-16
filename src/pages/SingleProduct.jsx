@@ -22,8 +22,8 @@ function SingleProduct() {
       {products?.map((prod) => {
         if (prod.id == id) {
           return (
-            <div key={prod.id} className=" mx-auto">
-              <article className="rounded-xl border-2 w-[1000px] ml-40 mt-40 mb-10 border-gray-100 bg-white">
+            <div key={prod.id}>
+              <article className="rounded-xl mx-auto border-2 w-[1000px]  mt-40 mb-10 border-gray-100 bg-white">
                 <div className="flex items-center gap-4 p-4 sm:p-6 lg:p-8">
                   <p className="block ">
                     <img
@@ -70,9 +70,7 @@ function SingleProduct() {
                     </Link>
                   </strong>
                 </div>
-              </article>
-
-              <div className="w-full ml-48 mx-auto flex  gap-4 ">
+              <div className="flex gap-4 ml-5">
                 <div className="flex items-center justify-center rounded mb-2 border border-gray-200">
                   {prod.amount ? (
                     <button
@@ -108,13 +106,15 @@ function SingleProduct() {
                     <BsPlusSquareFill />
                   </button>
                 </div>
-                <p className="font-semibold mt-2">Total Price: 
+                <p className="font-semibold mt-2">Total Price:
                   ${prod.amount *
                     (prod.price - (prod.price * prod.discount) / 100).toFixed(
                       2
                     )}
                 </p>
               </div>
+              </article>
+
             </div>
           );
         }
