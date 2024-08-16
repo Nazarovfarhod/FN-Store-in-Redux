@@ -21,13 +21,13 @@ function Navbar() {
       <div className="flex h-screen flex-col justify-between w-64 fixed top-0 z-30  border-e bg-slate-100">
         <div className="px-3 py-6">
           <span className="flex items-center p-1 mb-10 rounded-lg">
-            <div>
+            <Link to="/">
               <img className="w-20" src={Logo} alt="" />
-            </div>{" "}
-            <span className="mr-10">
+            </Link>{" "}
+            <Link to="/" className="mr-10">
               <span className="text-2xl italic font-bold">S</span>
               <span className="font-medium">tore</span>
-            </span>
+            </Link>
             <span>
               <div className="flex-none">
                 <div className="dropdown dropdown-end">
