@@ -4,7 +4,10 @@ import { useSelector, useDispatch } from "react-redux";
 import {
   increamentAmount,
   decreamentAmount,
+  deleteAmount,
 } from "../features/product/productSlice";
+//react icons
+import { TiDeleteOutline } from "react-icons/ti";
 
 function Cart() {
   const { products } = useSelector((state) => state.product);
@@ -31,6 +34,7 @@ function Cart() {
                   <th>Amount</th>
                   <th>Price</th>
                   <th>Total</th>
+                  <th>Delete</th>
                 </tr>
               </thead>
               <tbody>
@@ -45,7 +49,6 @@ function Cart() {
                         </div>
                       </div>
                     </td>
-
                     <td>{product.name}</td>
                     <td>
                       <button
@@ -77,6 +80,15 @@ function Cart() {
                         (product.price * product.discount) / 100
                       ).toFixed(2)}
                     </td>
+                    <td>
+                      <button
+                        onClick={() => dispatch(deleteAmount(product.id))}
+                        className="px-2 py-1"
+                      >
+                        {" "}
+                        <TiDeleteOutline className="w-6 h-6 hover:text-red-600" />
+                      </button>
+                    </td>
                   </tr>
                 ))}
               </tbody>
@@ -88,6 +100,7 @@ function Cart() {
                   <th>Amount</th>
                   <th>Price</th>
                   <th>Total</th>
+                  <th>Delete</th>
                 </tr>
               </tfoot>
             </table>

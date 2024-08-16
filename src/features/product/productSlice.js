@@ -53,6 +53,7 @@ export const productSlice = createSlice({
     deleteAmount: (state, { payload }) => {
       const item = state.products.find((prod) => prod.id == payload);
       item.amount = 0;
+      productSlice.caseReducers.calculateTotal(state);
     },
   },
 });
@@ -64,6 +65,7 @@ export const {
   increamentAmount,
   calculateOrder,
   calculateTotal,
+  deleteAmount,
 } = productSlice.actions;
 
 export default productSlice.reducer;
