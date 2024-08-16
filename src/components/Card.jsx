@@ -10,7 +10,7 @@ function Card({ product }) {
   return (
     <div
       href="#"
-      className="relative block rounded-tr-3xl w-72 border border-gray-100"
+      className="relative block rounded-tr-3xl w-80 border border-gray-100"
     >
       <span className="absolute -right-px -top-px rounded-bl-3xl rounded-tr-3xl bg-rose-600 px-6 py-4 font-medium uppercase tracking-widest text-white">
         Sale {product.discount}%
