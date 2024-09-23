@@ -13,11 +13,11 @@ function Card({ product }) {
       className="relative block rounded-tr-3xl w-80 border border-gray-100"
     >
       <span className="absolute -right-px -top-px rounded-bl-3xl rounded-tr-3xl bg-rose-600 px-6 py-4 font-medium uppercase tracking-widest text-white">
-        Sale {product.discount}%
+        Sale {product.discountPercentage}%
       </span>
 
       <img
-        src={product.imageUrl}
+        src={product.thumbnail}
         alt=""
         className="-ml-6 -mt-6 h-80 w-full rounded-bl-3xl rounded-tr-3xl border border-gray-300 object-cover"
       />

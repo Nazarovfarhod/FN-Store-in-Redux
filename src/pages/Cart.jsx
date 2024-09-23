@@ -44,12 +44,12 @@ function Cart() {
                       <div className="flex items-center gap-3">
                         <div className="avatar">
                           <div className="rounded-xl h-20 w-20">
-                            <img src={product.imageUrl} alt={product.name} />
+                            <img src={product.thumbnail} alt={product.title} />
                           </div>
                         </div>
                       </div>
                     </td>
-                    <td>{product.name}</td>
+                    <td>{product.title}</td>
                     <td>
                       <button
                         onClick={() => dispatch(increamentAmount(product.id))}
@@ -70,14 +70,14 @@ function Cart() {
                       $
                       {(
                         product.price -
-                        (product.price * product.discount) / 100
+                        (product.price * product.discountPercentage) / 100
                       ).toFixed(2)}
                     </td>
                     <td>
                       $
                       {(
                         product.amount * product.price -
-                        (product.price * product.discount) / 100
+                        (product.price * product.discountPercentage) / 100
                       ).toFixed(2)}
                     </td>
                     <td>

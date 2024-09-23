@@ -43,7 +43,7 @@ export const productSlice = createSlice({
           allOrdersAmount += prod.amount;
           allOrderPrice +=
             prod.amount *
-            (prod.price - (prod.price * prod.discount) / 100).toFixed(2);
+            (prod.price - (prod.price * prod.discountPercentage) / 100).toFixed(2);
         }
       });
 
@@ -63,7 +63,6 @@ export const {
   AddToAmount,
   decreamentAmount,
   increamentAmount,
-  calculateOrder,
   calculateTotal,
   deleteAmount,
 } = productSlice.actions;
